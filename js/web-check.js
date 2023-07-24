@@ -62,7 +62,7 @@ if (!isSafari() && !isAndroid) {
   console.log(window.location, 'window.location')
   if (window.location.search) {
     var a = window.location.href.split(window.location.search)
-    // window.location.href = a[0] + 'page.html' + window.location.search
+    window.location.href = a[0] + 'page.html' + window.location.search
   } else {
     window.location.href = window.location.href + '/page.html'
   }
