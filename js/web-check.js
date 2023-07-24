@@ -1,5 +1,5 @@
-var u = navigator.userAgent;
-var isAndroid = u.indexOf("Android") > -1 || u.indexOf("Adr") > -1;
+var u = navigator.userAgent.toLocaleLowerCase;
+var isAndroid = u.indexOf("android") > -1 || u.indexOf("adr") > -1;
 function getBrowserInfo() {
   var ua = navigator.userAgent.toLocaleLowerCase();
   console.log(ua, 'ua')
