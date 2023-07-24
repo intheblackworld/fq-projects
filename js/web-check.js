@@ -9,7 +9,7 @@ function getBrowserInfo() {
     browserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1];
   } else if (ua.match(/firefox/) != null) {
     browserType = "火狐";
-  } else if (ua.match(/ubrowser/) != null) {
+  } else if (ua.match(/ucbrowser/) != null) {
     browserType = "UC";
   } else if (ua.match(/opera/) != null) {
     browserType = "欧朋";
