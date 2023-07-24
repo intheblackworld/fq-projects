@@ -535,7 +535,7 @@
     var u = navigator.userAgent;
     var isAndroid = u.indexOf("Android") > -1 || u.indexOf("Adr") > -1;
     var isApple = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-    var isSafari = /^((?!chrome|android).) * safari/i.test(navigator.userAgent)
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
     if (isAndroid) {
       $(".don").attr("src", "img/don.gif");
