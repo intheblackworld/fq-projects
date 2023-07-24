@@ -23,21 +23,21 @@ function getBrowserInfo() {
     browserType = "遨游";
   } else if (ua.match(/chrome/) != null) {
     browserType = 'Chrome'
-    // var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
-    // function _mime(option, value) {
-    //   var mimeTypes = navigator.mimeTypes;
-    //   for (var mt in mimeTypes) {
-    //     if (mimeTypes[mt][option] == value) {
-    //       return true;
-    //     }
-    //   }
-    //   return false;
-    // }
-    // if (is360) {
-    //   browserType = '360';
-    // } else {
-    //   $('html').css("zoom", ".80");
-    // }
+    var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
+    function _mime(option, value) {
+      var mimeTypes = navigator.mimeTypes;
+      for (var mt in mimeTypes) {
+        if (mimeTypes[mt][option] == value) {
+          return true;
+        }
+      }
+      return false;
+    }
+    if (is360) {
+      browserType = '360';
+    } else {
+      browserType = 'Chrome'
+    }
   } else if (ua.match(/safari/) != null) {
     browserType = "Safari";
   }
