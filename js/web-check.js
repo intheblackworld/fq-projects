@@ -46,8 +46,11 @@ function getBrowserInfo() {
 
 console.log(getBrowserInfo(), 'getBrowserInfo')
 var isSafari = function () {
+  var ua = window.navigator.userAgent;
+  var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+  var webkit = !!ua.match(/WebKit/i);
   const browerType = getBrowserInfo()
-  return browerType === 'Safari'
+  return browerType === 'Safari' && (iOS && webkit && !ua.match(/CriOS/i))
 }
 
 if (!isSafari() && !isAndroid) {
