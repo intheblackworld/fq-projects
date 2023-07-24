@@ -1,19 +1,10 @@
 var u = navigator.userAgent;
 var isAndroid = u.indexOf("Android") > -1 || u.indexOf("Adr") > -1;
 var isSafari = function () {
-  var ua = navigator.userAgent.toLowerCase();
-  console.log(ua, 'ua')
-  if (ua.indexOf('safari') != -1) {
-    console.log(1)
-    if (ua.indexOf('chrome') > -1) {
-      return false
-    } else {
-      return true
-    }
-  } else {
-    console.log(4)
-    return false
-  }
+  var ua = window.navigator.userAgent;
+  var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+  var webkit = !!ua.match(/WebKit/i);
+  return iOS && webkit && !ua.match(/CriOS/i);
 }
 
 console.log(isSafari(), isAndroid)
