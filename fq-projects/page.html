@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>大玩家棋牌</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script>
+    function GetQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) {
+        return unescape(r[2]);
+      }
+      return null;
+    }
+    function changeURLPar(destiny, par, par_value) {
+      var pattern = par + "=([^&]*)";
+      var replaceText = par + "=" + par_value;
+      if (destiny.match(pattern)) {
+        var tmp = "/\\" + par + "=[^&]*/";
+        tmp = destiny.replace(eval(tmp), replaceText);
+        return tmp;
+      } else {
+        if (destiny.match("[\?]")) {
+          return destiny + "&" + replaceText;
+        } else {
+          return destiny + "?" + replaceText;
+        }
+      }
+      return destiny + "\n" + par + "\n" + par_value;
+    }
+    var params = GetQueryString("shareName");
+
+    var my_shareName = ""; //来源域名，可为空自动获取当前域名，可直接这里强制写好，
+    var my_proxyAccount = ""; // 会员邀请码，可为空，不为空的话会按上级的渠道来源展示不要乱写。
+
+    if (my_shareName != "") {
+      var hasUrl = changeURLPar(
+        window.location.href,
+        "shareName",
+        my_shareName
+      );
+      history.pushState(null, null, hasUrl);
+    }
+
+    var hasUrl2 = changeURLPar(
+      window.location.href,
+      "proxyAccount",
+      my_proxyAccount
+    );
+    history.pushState(null, null, hasUrl2);
+
+    if (!params && my_shareName == "") {
+      var url1 = changeURLPar(
+        window.location.href,
+        "shareName",
+        window.location.host
+      );
+      history.pushState(null, null, url1);
+      var url2 = changeURLPar(window.location.href, "proxyAccount", "");
+      history.pushState(null, null, url2);
+    }
+  </script>
+</head>
+
+<body>
+  <div class="main">
+    <div class="actions"></div>
+    <div class="timer">
+      <div class="timer1">
+        下期周礼金派发倒计时
+        <p class="time1-value"></p>
+      </div>
+      <div class="timer2">
+        下期月工资派发倒计时
+        <p class="time2-value"></p>
+      </div>
+    </div>
+    <div class="dialog-area"></div>
+    <div class="slide">
+      <div id="certify" class="">
+        <div class="swiper-container">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-wrapper">
+            <!-- <div class=" swiper-slide downloadButton">
+                <img src="img/1.png" />
+              </div>
+              <div class=" swiper-slide downloadButton">
+                <img src="img/2.png" />
+              </div>
+              <div class=" swiper-slide downloadButton">
+                <img src="img/3.png" />
+              </div> -->
+            <div class=" swiper-slide downloadButton ">
+              <img src="img/4.png" />
+            </div>
+            <div class=" swiper-slide downloadButton">
+              <img src="img/5.png" />
+            </div>
+            <div class=" swiper-slide downloadButton">
+              <img src="img/6.png" />
+            </div>
+            <!-- <div class=" swiper-slide downloadButton">
+                <img src="img/7.png" />
+              </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 热门游戏截图 Start -->
+    <div id="certify2">
+      <div class="swiper-container">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/slide1.gif" alt="加载失败" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide2.gif" alt="加载失败" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide3.gif" alt="加载失败" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide4.gif" alt="加载失败" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 热门游戏截图 End -->
+    <div class="customer-area">
+      <p class="customer-close">x</p>
+      <a href="https://vue.livehelp100service.com/1b3b943988f835dejkfle-kelib34290828f5ce2a24c176b5d445eebb0b879a3c496a66c7b542f9bfaa2c32fec"
+        target="_blank">
+        <img src="./img/cs.png" alt="" class="" />
+      </a>
+    </div>
+    <img src="./img/back_full_v3.jpeg?t=202305161000" alt="加载失败" class="bg" />
+
+    <div class="installBox" hidden="hidden">
+      <div class="install" id="downloadButton">
+        <a href="javascript:;" class="iosJump pic1" data-agl-cvt="6">
+          <img src="./img/ios_install.png" alt="加载失败" />
+        </a>
+        <a data-agl-cvt="6">
+          <img src="./img/android_install.png" alt="加载失败" />
+        </a>
+      </div>
+      <div class="course">
+        <img src="./img/zadn.png" alt="加载失败" />
+      </div>
+    </div>
+
+    <!--iOS 下载按钮 Start-->
+    <div class="iosurl">
+      <div class="ios_course">
+        <a href="#" class="downloadButton">
+          <img src="./img/IOS-xiazai01.gif" alt="" />
+        </a>
+      </div>
+
+      <div class="ios_course_super">
+        <a href="#" onClick="appDownLoad();">
+          <img src="./img/IOS-xiazai02.gif" alt="" />
+        </a>
+      </div>
+    </div>
+    <!--iOS 下载按钮 End-->
+
+    <!--Android 下载按钮 Start-->
+    <div class="androidurl">
+      <div class="android_course">
+        <a href="javascript:;" class="downloadButton">
+          <img src="./img/btn-android.gif" alt="" />
+        </a>
+      </div>
+    </div>
+    <!--Android 下载按钮 End-->
+
+    <!--不区分下载按钮 Start-->
+    <!-- <div class="allurl">
+        <div class="all_course">
+            <a href="javascript:;" class="downloadButton" >
+                <img src="./img/btn-all.png" alt="">
+                <img src="./img/ann2.png" alt="">
+            </a>
+        </div>
+    </div> -->
+    <!--不区分下载按钮 End-->
+
+    <div class="install">
+      <div class="install_title">
+        <div>安装教程</div>
+        <span class="close" style="font-size: 2rem;">×</span>
+      </div>
+      <div id="iosafter" class="wrapper">
+        <ul class="content">
+          <li>
+            <img src="./img/whatwei_1.png" class="img_01">
+            <p>01.点击华为<span>应用市场</span></p>
+          </li>
+          <li>
+            <img src="./img/whatwei_2.png" class="img_01">
+            <p>02.点击右下角 <span>我的</span></p>
+          </li>
+          <li>
+            <img src="./img/whatwei_3.png" class="img_01">
+            <p>03.点击应用安全检测 <span>查看</span></p>
+          </li>
+          <li>
+            <img src="./img/whatwei_4.png" class="img_01">
+            <p>04.查看管控中的软件 <span>点击处理</span></p>
+          </li>
+          <li>
+            <img src="./img/whatwei_5.png" class="img_01">
+            <p>05.<span>解除管控</span> 完成</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <div class="teach_iosurl">
+      <div class="teach_ios_course">
+        <a href="/ios.html"> <img src="./img/install_ios.png" alt="" /></a>
+      </div>
+    </div> -->
+    <!-- <div class="whatwei-tutorial look">华为鸿蒙解除报毒教程</div> -->
+    <!-- <img class="whatwei-tutorial look" src="./img/whatwei-btn.gif" alt=""> -->
+    <!-- 分发入口 -->
+    <!-- dwjqp08.com dwjqp09.com dwjqp10.com -->
+    <div class="go_to_entry">
+      <img src="./img/go_to_h5_page.gif" alt="" onClick="goToH5Page();" />
+      <img class="look ios_hide" src="./img/whatwei-btn.gif" alt="">
+      <div class="teach_ios_course">
+        <a href="/ios.html" class="android_hide"> <img src="./img/install_ios.gif" alt="" /></a>
+      </div>
+    </div>
+
+    <div class="mask" id="demo">
+      <div class="info">
+        <div class="header-top">提示信息</div>
+        <div class="header-info">苹果用户请使用safar浏览器进行打开下载。</div>
+        <div class="header-b">
+          <div class="header-r" id="copy">https://072371.com?pid=63679</div>
+          <button class="btn">复制</button>
+        </div>
+      </div>
+    </div>
+    <div id="xinren_list">
+      <div class="w750">
+        <a href="javascript:;" id="closeImg"><img src="./img/close.png" alt="" /></a>
+        <img src="./img/trust.png" alt="" />
+      </div>
+    </div>
+    <div class="loadingBox">
+      <div class="LBtitle">提示</div>
+      <div id="download_btn" class="LBcenter">
+        加载中，稍后请点击【立即下载】或【普通下载】继续安装.
+      </div>
+    </div>
+    <div class="window_log">
+      <div class="windowMsg">
+        <div class="installTitle">
+          <div>安装教程</div>
+          <div class="delBen">x</div>
+        </div>
+        <div class="installList">
+          <ul class="window_hint">
+            <li>
+              <img src="./img/install_1.png" alt="加载失败" />
+              <p>点击下载APP后选择“允许”</p>
+            </li>
+            <li>
+              <img src="./img/install_2.png" alt="加载失败" />
+              <p>描述文件下载完后点击“关闭”</p>
+            </li>
+            <li>
+              <img src="./img/install_3.png" alt="加载失败" />
+              <p>点击安装游戏，快捷跳转进入系统设置描述文件入口</p>
+            </li>
+            <li>
+              <img src="./img/install_4.png" alt="加载失败" />
+              <p>点击描述文件，开始安装</p>
+            </li>
+            <li>
+              <img src="./img/install_5.png" alt="加载失败" />
+              <p>安装描述文件</p>
+            </li>
+            <li>
+              <img src="./img/install_6.png" alt="加载失败" />
+              <p>安装开始前需要输入解锁密码（无密码忽略此步）</p>
+            </li>
+            <li>
+              <img src="./img/install_7.png" alt="加载失败" />
+              <p>最后再次点击“安装”后即可</p>
+            </li>
+            <li class="cancelInstall delBen">取消</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 下載修復工具 Start -->
+    <div class="fix-bg">
+      <img src="./img/fix-bg.png" alt="fix-bg" />
+    </div>
+    <div class="fix-link" onClick="fixLink();">
+      <img src="./img/fix-link.png" alt="fix-link" />
+    </div>
+    <!-- 下載修復工具 End -->
+
+    <!-- <div id="addDwonBox">
+        <div class="text">
+            <img src="./img/icon.png?20230317" alt="">
+            <p class="cont">
+                <strong style="color:yellow">金沙娱乐</strong>
+                <span></span>
+                <span id="appKey">0秒下载</span>
+            </p>
+        </div>
+        
+        <p class="button"  style="background-color: #5fcf2a;" >
+            <a href="https://chatlink.mstatik.com/widget/standalone.html?eid=7de70969b950a16e974881773a0ced3f" class="" style="text-decoration:none;">
+                <button type="button" style="background-color: #3c85bb;" >联系客服</button>
+            </a>
+        </p>
+        
+        <p class="button">
+            <a href="javascript:" class="downloadButton" style="text-decoration:none;" id="downloadButton2">
+                <button type="button" style="background-color: #5fcf2a;" >立即下载</button>
+            </a>
+        </p>
+
+    </div> -->
+  </div>
+
+  <div class="jcBox">
+    <div class="closeBtn">
+      <a href="#">
+        <img src="img/jc_close.jpg" style="width: 100%" alt="" /></a>
+    </div>
+    <img src="img/xinren.png" style="width: 100%" alt="" />
+    <div class="closeBtn">
+      <a href="#">
+        <img src="img/jc_close.jpg" style="width: 100%" alt="" /></a>
+    </div>
+  </div>
+</body>
+<script>
+  
+  var issafariBrowser = /iPhone/.test(navigator.userAgent);
+  var textFlag = 0;
+
+  function changeText() {
+    if (!textFlag) {
+      !issafariBrowser
+        ? $("#download_btn").html(
+          "加载中，稍后请点击【立即下载】或【普通下载】继续安装."
+        )
+        : $("#download_btn").html("正在加载中，稍后请点击“安装”继续.");
+      textFlag = 1;
+    } else {
+      !issafariBrowser
+        ? $("#download_btn").html(
+          "加载中，稍后请点击【立即下载】或【普通下载】继续安装..."
+        )
+        : $("#download_btn").html("正在加载中，稍后请点击“安装”继续...");
+      textFlag = 0;
+    }
+  }
+
+  function setText() {
+    $(".loadingBox").attr("style", "display:block;");
+    setInterval("changeText()", 500);
+  }
+
+  function openAdress() {
+    if (issafariBrowser) {
+      downloadIos();
+    } else {
+      setText();
+      setTimeout(function () {
+        $(".loadingBox").attr("style", "display:none;");
+        clearInterval(changeText);
+      }, 6000);
+    }
+  }
+
+  function downloadIos() {
+    $("#xinren_list").attr("style", "display:block;");
+    setText();
+    setTimeout(function () {
+      $(".loadingBox").attr("style", "display:none;");
+      clearInterval(changeText);
+    }, 6000);
+  }
+
+  $(document).ready(function () {
+    $("#closeImg").click(function (e) {
+      $("#xinren_list").attr("style", "display:none;");
+      $(".loadingBox").attr("style", "display:none;");
+      clearInterval(changeText);
+    });
+    $(".mask").click(function (e) {
+      $("#demo").attr("style", "display:none;");
+    });
+
+    // 
+    $('.look').click(function () {
+      $('.install').show();
+    })
+
+    // 点击X号关闭滑动层
+    $('.close').click(function () {
+        $('.install').hide()
+    })
+    // 点击黑色蒙层关闭滑动层
+    $('.install').click(function () {
+        $('.install').hide()
+        return false;
+    })
+
+    // $(".course").click(function (e) {
+    //     $(".window_log").attr("style", "display:block;");
+    //     $(".windowMsg").attr("style", "animation: winCut 0.5s 1;")
+    //     setTimeout(function () {
+    //         $(".windowMsg").attr("style", "bottom: 0%;");
+    //     }, 490)
+    // });
+
+    $(".delBen").click(function (e) {
+      $(".window_log").attr("style", "display:none;");
+      $(".windowMsg").attr("style", "bottom: -70%;");
+    });
+
+    var content = $("#copy").html();
+
+    // 遊戲輪播
+    var certifySwiper = new Swiper("#certify .swiper-container", {
+      watchSlidesProgress: true,
+      slidesPerView: "auto",
+      centeredSlides: true,
+      loop: true,
+      loopedSlides: 5,
+      autoplay: true,
+      autoplay: {
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        progress: function (progress) {
+          for (i = 0; i < this.slides.length; i++) {
+            var slide = this.slides.eq(i);
+            var slideProgress = this.slides[i].progress;
+            modify = 1;
+            if (Math.abs(slideProgress) > 1) {
+              modify = (Math.abs(slideProgress) - 0.7) * 0.4 + 0.6;
+            }
+            translate = slideProgress * modify * 100 + "px";
+            scale = 1 - Math.abs(slideProgress) / 9;
+            zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+            slide.transform(
+              "translateX(" + translate + ") scale(" + scale + ")"
+            );
+            slide.css("zIndex", zIndex);
+            slide.css("opacity", 1);
+            if (Math.abs(slideProgress) > 3) {
+              slide.css("opacity", 0);
+            }
+          }
+        },
+        setTransition: function (transition) {
+          for (var i = 0; i < this.slides.length; i++) {
+            var slide = this.slides.eq(i);
+            slide.transition(transition);
+          }
+        },
+      },
+    });
+    var certifySwiper2 = new Swiper("#certify2 .swiper-container", {
+      loop: true,
+      autoplay: true,
+      autoplay: {
+        disableOnInteraction: true,
+      },
+      navigation: {
+        nextEl: "#certify2 .swiper-button-next",
+        prevEl: "#certify2 .swiper-button-prev",
+      },
+      on: {
+        progress: function (progress) {
+
+        },
+        setTransition: function (transition) {
+
+        },
+      },
+    });
+  });
+
+  //新版 iOS 教程 Start
+  $(function () {
+    $(".ios_course a").click(function () {
+      // $('.jcBox').show();
+      // $('#container').hide();
+      return false;
+    });
+    $(".android_course a").click(function () {
+      // $('.jcBox').show();
+      // $('#container').hide();
+      return false;
+    });
+    $(".teach_ios_course a").click(function () {
+      $(".jcBox").show();
+      $("#container").hide();
+      return false;
+    });
+
+    $(".closeBtn a").click(function () {
+      $(".jcBox").hide();
+      $("#container").show();
+      return false;
+    });
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf("Android") > -1 || u.indexOf("Adr") > -1;
+    var isApple = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isAndroid) {
+      $(".don").attr("src", "img/don.gif");
+      $(".teach_ios_course").hide();
+      $(".ios_course").hide();
+      $(".ios_course_super").hide();
+      // $(".go_to_entry").hide();
+      $(".fix-bg").hide();
+      $(".fix-link").hide();
+      $(".android_hide").hide();
+    } else if (isApple) {
+      $(".don").attr("src", "img/appleDown.gif");
+      $(".android_course").hide();
+      $(".whatwei-tutorial").hide();
+      $(".ios_hide").hide();
+
+    } else {
+      alert("请在手机端打开网页");
+    }
+  });
+    //新版 iOS 教程 End
+</script>
+
+<!-- openinstall+超级签 从这里开始进行复制 -->
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="./js/openinstall.js"></script>
+<script type="text/javascript" src="./js/openinstall_source.js"></script>
+<script src="./js/swiper.min.js"></script>
+
+<script>
+  var u = navigator.userAgent;
+  var isAndroid = u.indexOf("Android") > -1 || u.indexOf("Adr") > -1;
+
+  //根据自己需求修改对应的默认渠道号
+  if (isAndroid) {
+    var channelCode = 10000;
+  } else {
+    $(".hotBox").show();
+    var channelCode = 20000;
+  }
+
+
+  var h5channelCode = 30000; //H5默认渠道号, 預設 30000, 沒渠道号不要改
+  var fxm = 0;  //請填入代理H5的 fxm, 預設 0, 沒指定不要改
+  var sign = "default"; //請填入代理H5的 sign, 沒指定不要改
+
+  let querys = (new URL(window.location)).searchParams;
+  if (querys) {
+    if (querys.get("channel_id") && querys.get("channel_id") != 'null') {
+      h5channelCode = querys.get("channel_id");
+    }
+
+    if (querys.get("fxm") && querys.get("fxm") != 'null') {
+      fxm = querys.get("fxm");
+    }
+
+    if (querys.get("sign") && querys.get("sign") != 'null') {
+      sign = querys.get("sign");
+    }
+  }
+
+  console.log(h5channelCode, fxm, sign)
+
+
+  var api_url = "";
+  //openinstall 的key值
+  var os_key = "wk1a9m";
+
+  //点击下载的按钮class名称，没有默认点击body下载
+  var btn_download = "downloadButton";
+
+  //是否允许安卓自动下载
+  var is_auto = 0;
+  $("body").addDownloadAuto({
+    channelCode: channelCode,
+    api_url: api_url,
+    os_key: os_key,
+    btn_download: btn_download,
+    is_auto: is_auto,
+  });
+
+  //蘋果下載網址
+  var super_ios_link = "https://AFBvyEjh.eeehudefei.com/6QM4wm58P7PxppQilF98Wu";
+
+  //H5 網址
+  var h5_link = "https://dwjqp08.com";
+  if ((h5channelCode != 30000) || (fxm != 0) || (sign != "default")) {
+    h5_link = h5_link + "?sign=" + sign + "&fxm=" + fxm + "&channel_id=" + h5channelCode;
+  }
+
+
+  //修复工具网址
+  var ios_fix_bug_link = "https://dwjxiufu.com";
+
+  var issafariBrowser = /iPhone/.test(navigator.userAgent);
+
+  function appDownLoad() {
+    if (issafariBrowser) {
+      window.location.href = super_ios_link;
+    } else {
+      alert("请用 iOS 手机下载");
+    }
+  }
+
+  function fixLink() {
+    window.location.href = ios_fix_bug_link;
+    // if (issafariBrowser) {
+    //   window.location.href = ios_fix_bug_link;
+    // } else {
+    //   alert("请用 iOS 手机下载");
+    // }
+  }
+
+  function goToH5Page() {
+    // 分发入口功能
+    window.location.href = h5_link;
+  }
+
+  $(".customer-close").click(function () {
+    $(".customer-area").hide();
+  });
+</script>
+<!-- openinstall+超级签 End-->
+
+<!-- 加上按鈕 script start -->
+<script>
+  const links = [
+    // ios 下载
+    // {
+    //   name: "ios-download1",
+    //   class: "ios-download1",
+    //   text: '是否安装APP，领取豪礼?',
+    //   dialogclass: 'dialog-install-1',
+    //   type: 'dialog',
+    //   href: "https://xhg6677.com?code=18183",
+    //   img: "./img/IOS-xiazai01.gif",
+    // },
+    // ios 备用下载
+    // {
+    //   name: "ios-download2",
+    //   class: "ios-download2",
+    //   text: '是否安装APP，领取豪礼?',
+    //   type: 'dialog',
+    //   dialogclass: 'dialog-install-2',
+    //   href: "https://ssipwmw.sidbakwaa.com/4ffsbt9",
+    //   img: "./img/IOS-xiazai02.gif",
+    // },
+    // ios 教程
+    // {
+    //   name: "ios-install",
+    //   class: "ios-install",
+    //   type: 'dialog',
+    //   dialogclass: 'dialog-ios-install',
+    //   href: "https://xhg6677.com?code=18183",
+    //   img: "./img/install_ios.png",
+    // },
+    // {
+    //   name: "ios-install",
+    //   class: "ios-install",
+    //   type: 'dialog',
+    //   dialogclass: 'dialog-ios-install',
+    //   text: '是否观看IOS安装教程?',
+    //   href: "https://xhg6677.com?code=18183",
+    //   img: "./img/install_ios.png",
+    // },
+    // {
+    //   name: "fix-bg",
+    //   class: "fix-bg",
+    //   // href: "https://xhg6677.com?code=18183",
+    //   img: "./img/fix-bg.png",
+    // },
+    // {
+    //   name: "fix-link",
+    //   class: "fix-link",
+    //   type: 'dialog',
+    //   text: '是否下载修复工具?',
+    //   dialogclass: 'dialog-fix',
+    //   href: "https://xhg6677.com?code=18183",
+    //   img: "./img/fix-link.png",
+    // },
+    // {
+    //   name: "立即注册 超链接",
+    //   class: "register-btn",
+    //   href: "https://xhg6677.com?code=18183",
+    //   img: "./img/register-btn.png",
+    // },
+    // {
+    //   name: "APP下载超链接",
+    //   class: "download-btn",
+    //   href: "https://xhg-app.com/",
+    //   img: "./img/download-btn.png",
+    // },
+    // {
+    //   name: "进入新皇体育官网1",
+    //   class: "gateway1",
+    //   href: "https://xhg7788.com?code=18184",
+    //   img: "",
+    //   type: 'gateway',
+    //   ms: '2'
+    // },
+    // {
+    //   name: "进入新皇体育官网2",
+    //   class: "gateway2",
+    //   href: "https://xhg7788.com?code=18184",
+    //   img: "",
+    //   type: 'gateway',
+    //   ms: '2'
+    // },
+    // {
+    //   name: "进入新皇体育官网3",
+    //   class: "gateway3",
+    //   href: "https://xhg6677.com?code=18183",
+    //   img: "",
+    //   type: 'gateway',
+    //   ms: '2'
+    // },
+    // {
+    //   name: "在线客服超链接",
+    //   class: "customer-btn",
+    //   href: "https://vue.livehelp100service.com/chatwindow.aspx?siteId=60001454&planId=a073ede9-f473-49aa-99d6-58ad7ec97bf6",
+    //   img: "./img/kf.gif",
+    // },
+  ];
+  $(".actions").html(`
+      ${links
+      .map(
+        (link) => `
+        ${link.type === "gateway"
+            ? `
+            <a href="${link.href}" class="${link.class} gateway" target="_blank">
+              <div class="gateway-ms"><span>${link.ms}</span>ms</div>
+              <div class="gateway-name">${link.name}</div>
+            </a>
+          `
+            : `<div class="${link.class}" target="_blank">
+            ${link.img && `<img src="${link.img}" alt="${link.name}">`}
+        </div>`
+          }
+      `
+      )
+      .join("")}
+    `);
+
+  $(".dialog-area").html(`
+      ${links
+      .map(
+        (link) => `
+          <div class="dialog-mask ${link.dialogclass}">
+            <div class="dialog absolute">
+              <img src="./img/dialog-close.png" alt="" class="dialog-close">
+              <div class="dialog-text">
+                ${link.text}
+              </div>
+              <a href="${link.href}" target="_blank">
+                <img src="./img/dialog-check.png" alt="" class="dialog-check">
+              </a>
+              <img src="./img/dialog-cancel.png" alt="" class="dialog-cancel">
+            </div>
+          </div>
+          `
+      )
+      .join("")}
+    `);
+
+    // $(".dialog-close").click(function () {
+    //   $(".dialog-mask").hide();
+    // });
+    // $(".dialog-cancel").click(function () {
+    //   $(".dialog-mask").hide();
+    // });
+
+    // $(".ios-download1").click(function () {
+    //   $(".dialog-install-1").show();
+    // });
+    // $(".ios-download2").click(function () {
+    //   $(".dialog-install-2").show();
+    // });
+    // $(".ios-install").click(function () {
+    //   $(".dialog-ios-install").show();
+    // });
+    // $(".fix-link").click(function () {
+    //   $(".dialog-fix").show();
+    // });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" crossorigin="anonymous"
+  referrerpolicy="no-referrer"></script>
+<script src="./js/moment-duration-format.js"></script>
+<script>
+  const timer = setInterval(() => {
+    const settle_of_week_day = moment()
+      .endOf("week")
+      .add(2, "days")
+      .startOf("day");
+    const settle_of_month_day = moment()
+      .endOf("month")
+      .add(1, "days")
+      .startOf("day");
+    const now = moment();
+    console.log(settle_of_week_day.diff(now, "seconds"));
+    const timetext_1 = moment.duration.format(
+      [moment.duration(settle_of_week_day.diff(now, "seconds"), "second")],
+      "dd天 hh:mm:ss"
+    );
+    const timetext_2 = moment.duration.format(
+      [moment.duration(settle_of_month_day.diff(now, "seconds"), "second")],
+      "dd天 hh:mm:ss"
+    );
+    // console.log()
+
+    // console.log(week_duration)
+    // const val = moment(week_duration).format('D [day], H [hour and] m [min]')
+    // console.log(val)
+    $(".time1-value").html(timetext_1);
+    $(".time2-value").html(timetext_2);
+  }, 1000);
+    // TODO
+    // 弹窗
+</script>
+<!-- 加上按鈕 script end -->
+
+</html>
