@@ -2,6 +2,7 @@ var u = navigator.userAgent;
 var isAndroid = u.indexOf("Android") > -1 || u.indexOf("Adr") > -1;
 var isSafari = function () {
   var ua = window.navigator.userAgent;
+  console.log(ua, 'ua')
   var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
   var webkit = !!ua.match(/WebKit/i);
   return iOS && webkit && !ua.match(/CriOS/i);
