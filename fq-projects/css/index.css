@@ -91,14 +91,14 @@ li {
 }
 
 .go_to_entry .teach_ios_course {
-  width: 50%;
+  /* width: 50%; */
+  width: 100%;
   margin: 0;
 }
 .go_to_entry .teach_ios_course img {
-  width: 95%;
+  width: 100%;
   height: auto;
   display: block;
-  margin: 0 0 0 5%;
   /* height: 10vw; */
 }
 
@@ -126,7 +126,12 @@ li {
 
 .teach_ios_course {
   margin: auto;
-  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.teach_ios_course a {
+  width: 50%;
 }
 
 .ios_course > a > img {
