@@ -82,7 +82,7 @@ li {
   margin: 0 auto;
   width: 95%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .go_to_entry img {
@@ -773,7 +773,7 @@ body > a[title="站长统计"] {
 .slide {
   width: 100vw;
   position: absolute;
-  top: 250vw;
+  top: 288vw;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -838,7 +838,7 @@ body > a[title="站长统计"] {
   position: absolute;
   width: 95vw;
   height: 46.4vw;
-  top: 331vw;
+  top: 369.8vw;
   left: 0;
   right: 0;
   margin: 0 auto;
