@@ -37,7 +37,7 @@ li {
   /* top: 44%;
   left: 10px;
   right: 10px; */
-  top: 138vw;
+  top: 179vw;
   left: 3vw;
   width: 94vw;
   /* height: 15vw; */
@@ -53,7 +53,7 @@ li {
 
 .androidurl {
   position: absolute;
-  top: 141vw;
+  top: 180vw;
   left: 3vw;
   width: 94vw;
 }
@@ -76,7 +76,7 @@ li {
 
 .go_to_entry {
   position: absolute;
-  top: 160vw;
+  top: 197vw;
   right: 0;
   left: 0;
   margin: 0 auto;
@@ -607,6 +607,14 @@ body > a[title="站长统计"] {
 .bg {
 }
 
+.bg.draw-from {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .ios-download1 {
   position: absolute;
   top: 138vw;
@@ -917,4 +925,41 @@ color: #fa3c02;
 .content li img {
   width: 100%;
   height: auto;
+}
+
+.site-ms-links {
+  position: absolute;
+  top: 146vw;
+  left: 3vw;
+  width: 94vw;
+}
+
+.site-item {
+  display: flex;
+  height: 9vw;
+  margin-bottom: 1vw;
+  margin-left: 16vw;
+  width: 78vw;
+}
+
+.ms {
+  width: 14vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 46vw;
+  padding: 2vw;
+  font-size: 3.4vw;
+  color: black;
+}
+
+.link span {
+  color: orange;
 }

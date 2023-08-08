@@ -144,6 +144,7 @@
       </a>
     </div>
     <img src="./img/back_full_v3.jpeg?t=202305161000" alt="加载失败" class="bg" />
+    <img src="./img/大玩家棋牌_落地页2_750w.jpg" alt="" class="bg draw-from">
 
     <div class="installBox" hidden="hidden">
       <div class="install" id="downloadButton">
@@ -184,6 +185,22 @@
       </div>
     </div>
     <!--Android 下载按钮 End-->
+
+    <!-- 站點 ms -->
+    <div class="site-ms-links">
+      <div class="site-item" onClick="goToH5Page('https://dwjqp08.com')">
+        <div class="ms"><span>1</span>ms</div>
+        <div class="link">https://<span>dwjqp08.com</span></div>
+      </div>
+      <div class="site-item" onClick="goToH5Page('https://dwjqp08.com')">
+        <div class="ms"><span>1</span>ms</div>
+        <div class="link">https://<span>dwjqp08.com</span></div>
+      </div>
+      <div class="site-item" onClick="goToH5Page('https://dwjqp08.com')">
+        <div class="ms"><span>1</span>ms</div>
+        <div class="link">https://<span>dwjqp08.com</span></div>
+      </div>
+    </div>
 
     <!--不区分下载按钮 Start-->
     <!-- <div class="allurl">
@@ -355,7 +372,7 @@
   </div>
 </body>
 <script>
-  
+
   var issafariBrowser = /iPhone/.test(navigator.userAgent);
   var textFlag = 0;
 
@@ -420,12 +437,12 @@
 
     // 点击X号关闭滑动层
     $('.close').click(function () {
-        $('.install').hide()
+      $('.install').hide()
     })
     // 点击黑色蒙层关闭滑动层
     $('.install').click(function () {
-        $('.install').hide()
-        return false;
+      $('.install').hide()
+      return false;
     })
 
     // $(".course").click(function (e) {
@@ -649,9 +666,12 @@
     // }
   }
 
-  function goToH5Page() {
+  function goToH5Page(link) {
     // 分发入口功能
-    window.location.href = h5_link;
+    if ((h5channelCode != 30000) || (fxm != 0) || (sign != "default")) {
+      link = link + "?sign=" + sign + "&fxm=" + fxm + "&channel_id=" + h5channelCode;
+    }
+    window.location.href = link ? link : h5_link;
   }
 
   $(".customer-close").click(function () {
@@ -800,25 +820,33 @@
       .join("")}
     `);
 
-    // $(".dialog-close").click(function () {
-    //   $(".dialog-mask").hide();
-    // });
-    // $(".dialog-cancel").click(function () {
-    //   $(".dialog-mask").hide();
-    // });
+  // $(".dialog-close").click(function () {
+  //   $(".dialog-mask").hide();
+  // });
+  // $(".dialog-cancel").click(function () {
+  //   $(".dialog-mask").hide();
+  // });
 
-    // $(".ios-download1").click(function () {
-    //   $(".dialog-install-1").show();
-    // });
-    // $(".ios-download2").click(function () {
-    //   $(".dialog-install-2").show();
-    // });
-    // $(".ios-install").click(function () {
-    //   $(".dialog-ios-install").show();
-    // });
-    // $(".fix-link").click(function () {
-    //   $(".dialog-fix").show();
-    // });
+  // $(".ios-download1").click(function () {
+  //   $(".dialog-install-1").show();
+  // });
+  // $(".ios-download2").click(function () {
+  //   $(".dialog-install-2").show();
+  // });
+  // $(".ios-install").click(function () {
+  //   $(".dialog-ios-install").show();
+  // });
+  // $(".fix-link").click(function () {
+  //   $(".dialog-fix").show();
+  // });
+
+  function getRandom(x) {
+    return Math.floor(Math.random() * x) + 1;
+  };
+
+  $(".site-ms-links .site-item:nth-child(1) .ms span ").html(getRandom(5))
+  $(".site-ms-links .site-item:nth-child(2) .ms span ").html(getRandom(5))
+  $(".site-ms-links .site-item:nth-child(3) .ms span ").html(getRandom(5))
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" crossorigin="anonymous"
   referrerpolicy="no-referrer"></script>
