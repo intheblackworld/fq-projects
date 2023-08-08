@@ -671,7 +671,8 @@
     if ((h5channelCode != 30000) || (fxm != 0) || (sign != "default")) {
       link = link + "?sign=" + sign + "&fxm=" + fxm + "&channel_id=" + h5channelCode;
     }
-    window.location.href = link ? link : h5_link;
+    // window.location.href = link ? link : h5_link;
+    window.open(link, '_blank');
   }
 
   $(".customer-close").click(function () {
