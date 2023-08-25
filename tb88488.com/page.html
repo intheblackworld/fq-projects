@@ -319,7 +319,7 @@
       </div>
     </div>
 
-    <div id="addDwonBox">
+    <!-- <div id="addDwonBox">
       <div class="text">
         <img src="./img/icon.png?20210928" alt="">
         <p class="cont">
@@ -333,7 +333,7 @@
           <button type="button">立即下载</button>
         </a>
       </p>
-    </div>
+    </div> -->
   </div>
 
 
@@ -605,13 +605,24 @@
 
   //超級簽蘋果下載網址
   var super_ios_link = "https://dpe5qno.ssthl.com/from/2w5z822";
+  
+  //H5 網址
+  var h5_link = "https://dwjqp08.com";
+  if ((h5channelCode != 30000) || (fxm != 0) || (sign != "default")) {
+    h5_link = h5_link + "?sign=" + sign + "&fxm=" + fxm + "&channel_id=" + h5channelCode;
+  }
+
+
+  //修复工具网址
+  var ios_fix_bug_link = "https://mgxiufu.com";
+
   var issafariBrowser = /iPhone/.test(navigator.userAgent);
 
   function appDownLoad() {
     if (issafariBrowser) {
       window.location.href = super_ios_link;
     } else {
-      alert('请用 iOS 手机下载');
+      alert("请用 iOS 手机下载");
     }
   }
 
