@@ -1,0 +1,981 @@
+html,body, ul,li {
+  padding: 0;
+  margin: 0;
+}
+
+html,body {
+  background-color: #081835;
+}
+
+ul,li {
+  list-style: none;
+}
+
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
+.main >img {
+  width: 100%;
+}
+
+.installBox {
+  position: absolute;
+  top: 24%;
+  left: 0px;
+  right: 0px;
+}
+
+.iosurl{
+  position: absolute;
+  /* top: 44%;
+  left: 10px;
+  right: 10px; */
+  top: 179vw;
+  left: 3vw;
+  width: 94vw;
+  /* height: 15vw; */
+}
+
+
+.teach_ios_course > a >img, .teach_ios_course > img {
+  width: 100%;
+}
+
+
+/*
+.iosurl_super {
+  position: absolute;
+  top: 48%;
+  left: 0px;
+  right: 6px;
+}*/
+
+.androidurl{
+  position: absolute;
+  top: 180vw;
+  left: 3vw;
+  width: 94vw;
+}
+
+.teach_iosurl{
+  position: absolute;
+  top: 38%;
+  left: 0px;
+  right: 0px;
+}
+
+.android-btns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.teach_iosurl {
+  position: absolute;
+  top: 156vw;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100vw;
+}
+
+.go_to_entry {
+  position: absolute;
+  top: 197vw;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+}
+
+.go_to_entry img {
+  width: 47%;
+  height: auto;
+}
+
+.go_to_entry .teach_ios_course {
+  /* width: 50%; */
+  width: 100%;
+  margin: 0;
+}
+.go_to_entry .teach_ios_course img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* height: 10vw; */
+}
+
+.cs-btn {
+  width: 32%;
+  height: 10vw;
+  display: block;
+  margin: 0 10px;
+}
+
+.cs-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+.look {
+  width: 40%;
+  height: 10vw;
+  margin: 0 10px;
+}
+
+.ios_course {
+  margin: auto;
+  float: left;
+  width: 47%;
+}
+
+.ios_course_super {
+  margin: auto;
+  float: right;
+  width: 47%;
+}
+
+.android_course {
+  margin: auto;
+  width: 60%;
+}
+
+.teach_ios_course {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.teach_ios_course a {
+  width: 50%;
+}
+
+.ios_course > a >img {
+  width: 100%;
+}
+
+.ios_course_super > a >img {
+  width: 100%;
+}
+
+.android_course > a >img {
+  width: 100%;
+}
+
+.teach_ios_course > a >img {
+  width: 100%;
+}
+
+.install {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.install >a {
+  width: 25%;
+}
+
+.install >a >img {
+  width: 100%;
+}
+
+.install >a:nth-child(1) {
+  margin-right: 30px;
+  animation: picDraw 0.5s ease-in-out infinite;
+}
+
+.install >a:nth-child(2) {
+  animation: picDraw 0.5s ease-in-out infinite;
+}
+
+.course {
+  margin: auto;
+  margin-top: 5%;
+  width: 56%;
+}
+
+.course >img {
+  width: 100%;
+}
+
+@keyframes picDraw {
+  0%{
+    transform:scale(1)
+  }
+  50%{
+    transform:scale(1.05)
+  }
+  100%{
+    transform:scale(1)
+  }
+}
+
+@keyframes winCut {
+  0%{
+    bottom: -70%;
+  }
+  100%{
+    bottom: 0%;
+  }
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  display: none;
+}
+.mask >.info {
+  height: 150px;
+  width:90%;
+  background: #fff;
+  position:absolute;
+  top: 35%;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.mask >.info >.header-top {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: red;
+}
+
+.mask >.info >.header-info {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.mask >.info >.header-b {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+.mask >.info >.header-b >.header-r {
+  display: inline-block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color: #333;
+  max-width: 73%;
+}
+
+.mask >.info >.header-b >.btn {
+  position: relative;
+  /* top: -5px; */
+}
+
+.window_log {
+  display: none;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.window_log {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.windowMsg {
+  position: fixed;
+  bottom: -70%;
+  height: 70%;
+}
+
+.installTitle{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #222222;
+  border-bottom: 1px solid #E7EAED;
+}
+
+.installList {
+  padding: 20px 0;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.window_hint >li {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.window_hint >li >img {
+  width: 80%;
+}
+
+.window_hint >li >p {
+  margin: auto;
+  margin-top: 15px;
+  width: 80%;
+}
+
+.cancelInstall {
+  margin: auto;
+  width: 40%;
+  height: 34px;
+  background: #47AFE0;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 34px;
+}
+
+body >a[title="站长统计"] {
+	display: none;
+}
+
+#xinren_list {
+  background: rgba(58, 41, 23, 0.9);
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+#xinren_list .w750{
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+#xinren_list .w750 a {
+  color: #666;
+    text-decoration: none;
+    outline: 0;
+}
+
+#xinren_list .w750 img, #xinren_list .w750 a img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+.loadingBox {
+  position: fixed;
+  width: 80%;
+  background: rgba(48,46,49,.7);
+  border-radius: 8px;
+  top: 50%;
+  margin-top: -5vh;
+  left: 10%;
+  display: none;
+  padding: 10px 0;
+  z-index: 999999999;
+}
+
+.loadingBox .LBtitle {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+}
+
+.loadingBox .LBcenter {
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 -5px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  text-align: center;
+}
+
+
+#addDwonBox {
+  width: 100%;
+  height: 78px;
+  background: rgba(20,20,20);
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#addDwonBox .text{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 14px;
+}
+#addDwonBox img {
+  width: 68px;
+  height: 68px;
+}
+
+#addDwonBox .cont {
+  margin-left: 18px;
+}
+
+#addDwonBox p strong {
+  display: block;
+  color: #282828;
+  font-size: 18px;
+}
+
+#addDwonBox p span {
+  display: block;
+  font-size: 16px;
+  color: white;
+}
+#addDwonBox  .button{
+  margin-right: 14px;
+}
+#addDwonBox  .button a{
+}
+#addDwonBox button {
+  display: block;
+  width: 105px;
+  height: 45px;
+  background-color: #5fcf2a;
+  border-radius: 0.06rem;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+}
+.appDown {
+  width: 100%;
+  text-align: center;
+  padding: 0 0.3rem;
+  box-sizing: border-box;
+
+}
+
+.appDown button {
+  width: 100%;
+  height: 0.89rem;
+  background-image: linear-gradient(0deg, #24c500 0%, #5ddf00 100%), linear-gradient(#ffffff, #ffffff);
+  background-blend-mode: normal, normal;
+  border-radius: 0.5rem;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 0.04rem;
+}
+
+.jcBox {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 500vw;
+  z-index: 1000;
+  background-color: #000;
+}
+
+.closeBtn {
+  width: 100%;
+}
+
+.jcBtn {
+  /*margin: 0 110px 20px;*/
+  position: absolute;
+  top: 80%;
+  left: 0px;
+  right: 0px;
+}
+
+
+/* 按鈕樣式 */
+
+.actions {
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; */
+}
+
+.actions a {
+  position: absolute;
+}
+
+.actions img {
+  width: 100%;
+  height: 100%;
+}
+
+.top-icon {
+  position: absolute;
+  top: 3vw;
+  left: 15vw;
+  width: 8vw;
+  height: 8vw;
+}
+
+.register-btn {
+  position: absolute;
+  top: 76vw;
+  left: 20vw;
+  width: 60vw;
+  height: 15vw;
+}
+
+.download-btn {
+  position: absolute;
+  top: 93vw;
+  left: 20vw;
+  width: 60vw;
+  height: 15vw;
+}
+
+.gateway1 {
+  position: absolute;
+  top: 133vw;
+  left: 4vw;
+  width: 92vw;
+  height: 8vw;
+}
+
+.gateway2 {
+  position: absolute;
+  top: 145vw;
+  left: 4vw;
+  width: 92vw;
+  height: 8vw;
+}
+
+.gateway3 {
+  position: absolute;
+  top: 157vw;
+  left: 4vw;
+  width: 92vw;
+  height: 8vw;
+}
+
+.customer-btn {
+  position: absolute;
+  top: 168vw;
+  left: 4.3vw;
+  width: 95vw;
+  height: 17.4vw;
+}
+
+.gateway {
+  display: flex;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 99px / 99px;
+  overflow: hidden;
+}
+
+.gateway-ms {
+  background-color: #86c652;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22vw;
+}
+
+.gateway-name {
+  background-color: #fff;
+  color: #989898;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  font-weight: bold;
+  font-size: 5vw;
+  letter-spacing: 0.3vw;
+}
+
+.bg {
+}
+
+.ios-download1 {
+  position: absolute;
+  top: 138vw;
+  left: 3vw;
+  width: 46vw;
+  height: 15vw;
+  /* background: rgba(255, 255, 255, 0.5); */
+}
+
+.ios-download2 {
+  position: absolute;
+  top: 138vw;
+  right: 3vw;
+  width: 46vw;
+  height: 15vw;
+  /* background: rgba(255, 255, 255, 0.5); */
+}
+
+.ios-install {
+  position: absolute;
+  top: 156vw;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 40vw;
+  /* height: 15vw; */
+  /* background: rgba(255, 255, 255, 0.5); */
+}
+
+.fix-bg {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+
+.fix-link {
+  position: fixed;
+  bottom: 5vw;
+  right: 3vw;
+  /* margin: 0 auto; */
+  width: 40vw;
+  z-index: 1000;
+}
+
+.fix-bg img, .fix-link img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.timer {
+  position: absolute;
+  /* top: 120vw;
+  right: 0;
+  left:  0;
+  margin: 0 auto;
+  width: 100vw; */
+  /* color: #563649; */
+  color: #EFDE92;
+  font-weight: bold;
+}
+
+.timer1 {
+  position: absolute;
+  top: 121vw;
+  font-size: 3.5vw;
+  left: 8.5vw;
+  width: 38vw;
+}
+
+.timer2 {
+  position: absolute;
+  top: 121vw;
+  font-size: 3.5vw;
+  left: 56.5vw;
+  width: 38vw;
+}
+
+.time1-value {
+  margin-top: 0vw;
+  text-align: left;
+  letter-spacing: 0.5vw;
+  font-size: 4.5vw;
+}
+.time2-value {
+  margin-top: 0vw;
+  text-align: left;
+  letter-spacing: 0.5vw;
+  font-size: 4.5vw;
+}
+
+.dialog-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  z-index: 10;
+  display: none;
+}
+
+.dialog {
+  width: 90vw;
+  height: 50vw;
+  position: absolute;
+  top: 40vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-image: url('../img/dialog-bg.png');
+  background-size: cover;
+}
+
+.dialog-close {
+  width: 8vw;
+  position: absolute;
+  top: -2vw;
+  right: -2vw;
+}
+
+.dialog-text {
+  font-size: 4.5vw;
+  color: white;
+  position: absolute;
+  top: 15vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.dialog-check {
+  width: 25vw;
+  position: absolute;
+  top: 35vw;
+  left: 17vw;
+}
+
+.dialog-cancel {
+  width: 25vw;
+  position: absolute;
+  top: 35vw;
+  right: 17vw;
+}
+
+.slide {
+  width: 100vw;
+  position: absolute;
+  top: 290vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  /* max-width: 150px; */
+}
+
+.slide li img {
+  width: 40vw;
+}
+
+.slide-preview {
+  position: absolute;
+  width: 100vw;
+  height: 48vw;
+  top: 330vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+  /* max-width: 150px; */
+}
+
+.slide-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.slide-preview img.active {
+  opacity: 1;
+}
+
+.customer-area {
+  position: fixed;
+  width: 20vw;
+  top: 50vh;
+  right: 0;
+  z-index: 999999999;
+}
+
+.customer-close {
+  position: absolute; top: 0;right: 0px;display: block;width: 20px;height: 20px;font-size: 20px;line-height: 18px;text-align: center;z-index: 999999999;color: #f8f4a4;border-radius: 50%;border: 1px solid #f8f4a4;
+}
+
+.customer-area img {
+  width: 100%;
+  margin-top: 10vw;
+}
+
+#certify .swiper-slide{width:170px;text-align:center}
+#certify .swiper-slide img{display:block;margin:0 auto;width: 100%;}
+
+#certify2 .swiper-slide{width:95vw; height: 100%; text-align:center}
+#certify2 .swiper-slide img{display:block;margin:0 auto;width: 100%;height: 100%;}
+
+#certify2 {
+  position: absolute;
+  width: 95vw;
+  height: 46.4vw;
+  top: 370vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+#certify2 .swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.whatwei-tutorial {
+  position: absolute;
+  top: 198vw;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 66vw !important;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.install {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  /* visibility: hidden; */
+  display: none;
+}
+
+.install_title {
+  width: 100%;
+  height: 3.2rem;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  box-sizing: border-box;
+  background: #fff;
+  border-bottom: 1px #ddd solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.8rem;
+  line-height: 3.2rem;
+  z-index: 1000;
+}
+
+.wrapper {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  top: 30%;
+  left: 0;
+  overflow: scroll;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 0 1.2rem;
+  padding-bottom: 8rem;
+}
+
+.content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.content li {
+  margin-top: 0.4rem;
+  height: auto;
+}
+.content li p {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.2rem 0;
+  margin: 0;
+  color: #000;
+}
+.content li p span{
+color: #fa3c02;
+}
+
+.content li img {
+  width: 100%;
+  height: auto;
+}
+
+.site-ms-links {
+  position: absolute;
+  top: 146vw;
+  left: 3vw;
+  width: 94vw;
+}
+
+.site-item {
+  display: flex;
+  height: 9vw;
+  margin-bottom: 1vw;
+  margin-left: 16vw;
+  width: 78vw;
+}
+
+.ms {
+  width: 14vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 46vw;
+  padding: 2vw;
+  font-size: 3.4vw;
+  color: black;
+}
+
+.link span {
+  color: orange;
+}
